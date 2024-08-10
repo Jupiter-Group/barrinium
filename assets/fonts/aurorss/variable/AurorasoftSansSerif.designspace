@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="4.1">
+  <axes>
+    <axis tag="wght" name="wght" minimum="400" maximum="700" default="400">
+      <labelname xml:lang="en">Weight</labelname>
+    </axis>
+  </axes>
+  <sources>
+    <source filename="AurorasoftSansSerif-Regular.ufo" familyname="Aurorasoft Sans Serif">
+      <location>
+        <dimension name="wght" xvalue="400"/>
+      </location>
+    </source>
+    <source filename="AurorasoftSansSerif-Bold.ufo" familyname="Aurorasoft Sans Serif">
+      <location>
+        <dimension name="wght" xvalue="700"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance stylename="Regular">
+      <location>
+        <dimension name="wght" xvalue="400"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance stylename="Bold">
+      <location>
+        <dimension name="wght" xvalue="700"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+  </instances>
+</designspace>
