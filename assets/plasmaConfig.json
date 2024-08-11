@@ -27,7 +27,7 @@
                     {
                         "type":"AppsWidget",
                         "config":{
-                            "apps":["/usr/share/applications/konsole.desktop", "/usr/share/applications/dolphin.desktop"]
+                            "apps":["/usr/share/applications/konsole.desktop", "/usr/share/applications/dolphin.desktop", "/usr/share/applications/minibrowser.desktop"]
                         }
                     },
                     {

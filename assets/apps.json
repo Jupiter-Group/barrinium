@@ -75,7 +75,7 @@
             ],
             "type": "file"
         },
-        "content": "[Desktop Entry]\nName=Aurorasoft MiniBrowser\nExec=minibrowser\nIcon=/usr/share/icons/breeze-dark/apps/internet-web-browser.svg\nCategories=utilities"
+        "content": "[Desktop Entry]\nName=Aurorasoft MiniBrowser\nExec=minibrowser %U\nIcon=/usr/share/icons/breeze-dark/apps/internet-web-browser.svg\nCategories=system;utilities"
     },
     "vortix.desktop": {
         "meta": {
@@ -88,7 +88,7 @@
             ],
             "type": "file"
         },
-        "content": "[Desktop Entry]\nName=Vortix\nExec=vortix\nIcon=/usr/share/icons/breeze-dark/apps/utilities-terminal.svg\nCategories=system"
+        "content": "[Desktop Entry]\nName=Vortix\nExec=vortix %U\nIcon=/usr/share/icons/breeze-dark/apps/utilities-terminal.svg\nCategories=system;utilities\nMimeType=application/x-sh"
     },
     "chess.desktop": {
         "meta": {
