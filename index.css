@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'interface';
-    src: url(https://delivercdn.pages.dev/barrinium/fonts/vf/KilroyMono-VF.ttf);
+    font-family: 'barriniumFont';
+    src: url(https://delivercdn.pages.dev/barrinium/fonts/vf/AurorasoftSansSerif-VF.ttf);
 }
 
 html, body {
@@ -22,8 +22,8 @@ html, body {
     }
 }
 body::before {
-    font-family: 'interface', Helvetica, sans-serif !important;
-    content: "Loading...";
+    font-family: 'barriniumFont', Helvetica, sans-serif !important;
+    content: "Starting...";
     background-color: rgb(49, 54, 59);
     color: rgb(252, 252, 252);
     height: 100vh;

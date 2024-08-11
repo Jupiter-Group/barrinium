@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Vortix Mono';
-    src: url(https://airglow.pages.dev/assets/fonts/GwladUI.ttf);
+    font-family: 'barriniumFont';
+    src: url(https://delivercdn.pages.dev/barrinium/fonts/vf/AurorasoftSansSerif-VF.ttf);
 }
 
 #sidebar{
@@ -25,7 +25,7 @@
     width:100%;
     padding-top:5px;
     padding-bottom:5px;
-    font-family: 'Vortix Mono', monospace;
+    font-family: 'barriniumFont', monospace;
     font-size:1.2em;
 }
 .item:hover{

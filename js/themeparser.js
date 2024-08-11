@@ -58,11 +58,11 @@ class ThemeLoader {
         }
         // Add font and make all elements use it
         return `@font-face {
-            font-family: linuxFont;
+            font-family: barriniumFont;
             src: url("https://delivercdn.pages.dev/barrinium/fonts/vf/AurorasoftSansSerif-VF.ttf");
           }
           *{
-              font-family:linuxFont;
+              font-family:barriniumFont;
           }`
     }
 
