@@ -1,6 +1,6 @@
 import ProgramApi from "../appApi/backend/api.js";
 import WebKWin from "./windowmanager.js";
-import { checkPermission } from "../barriniumCore/components/checkPermission.js"
+import { checkPermission } from "../linuxCore/components/checkPermission.js"
 import toMime from "./toMime.js";
 
 // Popup for panel widgets

@@ -5,7 +5,7 @@ import DesktopMenu from "./menu.js";
 import toMime from "./toMime.js";
 import DesktopDrag from "./desktopDrag.js";
 import "./windowmanager.js"
-import * as barrinium from "../barriniumCore/index.js";
+import * as linux from "../linuxCore/index.js";
 import ThemeLoader from "./themeparser.js"
 import WebKWin from "./windowmanager.js"
 import openFile from "./openFile.js"
@@ -69,22 +69,22 @@ class Desktop {
         this.config = config;
 
         // load current theme from config, with font
-        this.theme = new ThemeLoader(barrinium.fileapi.internal.read("/usr/share/themes/" + this.config.desktop.theme), "data:application/octet-stream;base64," + btoa(barrinium.fileapi.internal.read(this.config.font)));
+        this.theme = new ThemeLoader(linux.fileapi.internal.read("/usr/share/themes/" + this.config.desktop.theme), "data:application/octet-stream;base64," + btoa(linux.fileapi.internal.read(this.config.font)));
         this.element = document.getElementById("desktop");
         this.window = WebKWin;
         this.openFile = openFile;
-        this.Tty = barrinium.Tty;
-        this.mainTty = barrinium.mainTty;
+        this.Tty = linux.Tty;
+        this.mainTty = linux.mainTty;
 
         this.render();
         this.addListeners();
     }
     // (Re-)render desktop
     render() {
-        config = JSON.parse(barrinium.fileapi.internal.read("/home/demo/.config/plasma.json"));
+        config = JSON.parse(linux.fileapi.internal.read("/home/demo/.config/plasma.json"));
         this.config = config;
-        this.theme.changeTheme(barrinium.fileapi.internal.read("/usr/share/themes/" + this.config.desktop.theme));
-        this.element.style.backgroundImage = `url("data:image/png;base64,${btoa(barrinium.fileapi.internal.read(this.config.desktop.backgroundimage))}")`;
+        this.theme.changeTheme(linux.fileapi.internal.read("/usr/share/themes/" + this.config.desktop.theme));
+        this.element.style.backgroundImage = `url("data:image/png;base64,${btoa(linux.fileapi.internal.read(this.config.desktop.backgroundimage))}")`;
         this.renderApps();
         this.renderPanels();
     };
@@ -96,13 +96,13 @@ class Desktop {
         this.apps = [];
 
         // Get list of file names on desktop
-        let apps = barrinium.fileapi.internal.list("/home/demo/Desktop");
+        let apps = linux.fileapi.internal.list("/home/demo/Desktop");
 
         // Generate correct app elements using the name 
         let preparedApps = apps.map((app, index, apps) => {
             let result = {};
             result.name = app;
-            let meta = barrinium.fileapi.internal.readMeta("/home/demo/Desktop/" + app);
+            let meta = linux.fileapi.internal.readMeta("/home/demo/Desktop/" + app);
             result.meta = meta;
 
             // Attempt to set correct icon using MIME type
@@ -167,7 +167,7 @@ class Desktop {
                         prompt.api.channel.onevent = data => {
                             if (data.event == "quit") {
                                 let name = data.read();
-                                barrinium.fileapi.internal.mkdir("demo", `/home/demo/Desktop/${name}`);
+                                linux.fileapi.internal.mkdir("demo", `/home/demo/Desktop/${name}`);
                                 this.renderApps();
                             }
                         }
@@ -185,7 +185,7 @@ class Desktop {
                         prompt.api.channel.onevent = data => {
                             if (data.event == "quit") {
                                 let name = data.read();
-                                barrinium.fileapi.internal.write("demo", `/home/demo/Desktop/${name}`, "");
+                                linux.fileapi.internal.write("demo", `/home/demo/Desktop/${name}`, "");
                                 this.renderApps();
                             }
                         }
@@ -293,9 +293,9 @@ class Desktop {
 };
 
 // Render desktop
-barrinium.fileapi.onready.then(() => {
+linux.fileapi.onready.then(() => {
     // Load config
-    config = JSON.parse(barrinium.fileapi.internal.read("/home/demo/.config/plasma.json"));
+    config = JSON.parse(linux.fileapi.internal.read("/home/demo/.config/plasma.json"));
     new Desktop(config);
     // Flag to prevent needless downloading
     localStorage.downloaded = true;

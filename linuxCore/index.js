@@ -34,7 +34,7 @@ export let data = {
         LOGNAME: "demo",
         EDITOR: "/bin/nano"
     },
-    computer: "barrinium",
+    computer: "linux",
     user: "demo"
 }
 export class Tty {
