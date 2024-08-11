@@ -56,7 +56,7 @@ class ThemeLoader {
         // Add font and make all elements use it
         return `@font-face {
             font-family: linuxFont;
-            src: url("https://delivercdn.pages.dev/AurorasoftGroup/fonts/aurorss/variable/variable_ttf/AurorasoftSansSerif-VF.ttf");
+            src: url("https://delivercdn.pages.dev/barrinium/fonts/vf/KilroyMono-VF.ttf");
           }
           body{
               font-family:linuxFont;
