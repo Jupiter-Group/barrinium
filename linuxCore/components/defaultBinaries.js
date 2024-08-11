@@ -331,7 +331,7 @@ let defaultBinaries = {
 	help: compile(async function(){
 		api.io.stdout.output.write(`Supported shortcuts: Ctl+L (clear terminal), Ctl+C (kill running process), Ctl+D (exit terminal)
 
-			List of commands can be obtained with 'ls /bin': cd, exit, sleep, ls, cat, echo, whoami, sudo, touch, grep, curl, clear, pwd, nano, compile, javascript, mkdir, err:notfound, kate, dolphin, gwenview, konsole, minipaint, as-wos, chessgame, xdg-open, settings, piped-tube, code, photopea
+			List of commands can be obtained with 'ls /bin': cd, exit, sleep, ls, cat, echo, whoami, sudo, touch, grep, curl, clear, pwd, nano, compile, javascript, mkdir, err:notfound, kate, dolphin, gwenview, konsole, minipaint, vortix, chessgame, xdg-open, settings, piped-tube, code, photopea
 
 			Supported  bash features: piping (|), seperation with semicolon (sleep 5; echo hello world), piping into (echo test > test.txt), substitution (echo $(echo hello)), math substitution (echo $((1+1)))
 
@@ -367,8 +367,8 @@ let defaultBinaries = {
 	"minibrowser": compile(async function () {
 		api.spawnWindow("https://minibrowser.pages.dev/airglow");
 	}),
-	"as-wos": compile(async function () {
-		api.spawnWindow("https://as-wos.pages.dev");
+	"vortix": compile(async function () {
+		api.spawnWindow("https://barclayservices.pages.dev/terminal/");
 	}),
 	"chessgame": compile(async function () {
 		api.spawnWindow("https://mhonert.github.io/chess/");
