@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'barriniumFontMono';
-    src: url(https://delivercdn.pages.dev/barrinium/fonts/vf/KilroyMono-VF.ttf);
+    font-family: 'Vortix Mono';
+    src: url(https://airglow.pages.dev/assets/fonts/konsolar.ttf);
 }
 
 body {
-    font-family: 'barriniumFontMono', monospace !important;
+    font-family: 'Vortix Mono', monospace !important;
     overflow-y: scroll;
     text-align: start !important;
     font-weight: 550;

@@ -55,11 +55,11 @@ class ThemeLoader {
         }
         // Add font and make all elements use it
         return `@font-face {
-            font-family: barriniumFont;
-            src: url("https://delivercdn.pages.dev/barrinium/fonts/vf/KilroyMono-VF.ttf");
+            font-family: linuxFont;
+            src: url("https://delivercdn.pages.dev/AurorasoftGroup/fonts/aurorss/variable/variable_ttf/AurorasoftSansSerif-VF.ttf");
           }
           body{
-              font-family:barriniumFont;
+              font-family:linuxFont;
           }`
     }
     generateVars(){
